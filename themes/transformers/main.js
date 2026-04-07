@@ -23,6 +23,14 @@
   if (typeof startBgmIfEnabled === 'function') {
     startBgmIfEnabled();
   }
+    if (typeof jsmaf.bgm === 'undefined') {
+    jsmaf.bgm = new jsmaf.AudioClip();
+    jsmaf.bgm.volume = 0.5;
+    jsmaf.bgm.open("file://../download0/themes/transformers/img/bgm.wav");
+  }
+  var bgm = jsmaf.bgm;
+
+  bgm.play(true);
   var background = new Image({
     url: 'file:///../download0/themes/transformers/img/Fondo.jpg',
     x: 0,
